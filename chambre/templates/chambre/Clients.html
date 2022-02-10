@@ -1,0 +1,73 @@
+
+{% extends 'chambre/main.html'%}
+{% load static %}
+
+
+
+
+
+{% block content %}
+
+<h5>BIENVENU</h5>
+
+
+
+<div  class="pt-5 ">
+<div class="container pb-5">
+  <div class="row row-cols-4">
+    <div class="col">Nom : {{Clients.nom}}</div>
+    <div class="col">Age : {{Clients.age}}</div>
+    <div class="col">Phone : {{Clients.phone}}</div>
+    <div class="col">Email : {{Clients.email}}</div>
+  </div>
+</div></div>
+<div class="container pb-5">
+  <div class="row row-cols-4">
+    <div class="col pb-5">num_reservation: <span class="badge rounded-pill badge-notification bg-primary">   {{nomb_reservation}}</span></div>
+    vous pouvez reserver:  <a href="{% url 'Reservations' %}" ><span class="badge rounded-pill badge-notification bg-primary">     Reservation</span></a>
+  </div>
+</div>
+
+
+<dev class="container">
+  <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Nom_chamre</th>
+          <th scope="col">etage_chambre</th>
+          <th scope="col">Date_debut_reservation</th>  
+          <th scope="col">Date_fin_reservation</th>
+          <th scope="col">tag_reservation</th>  
+          <th scope="col">Date_debut_planification</th>
+          <th scope="col">Action</th>    
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {% for item in Plannings %}
+          <td>{{ item.Chambre.nom_ch}}</td>
+          <td>{{ item.Chambre.etage}}</td>
+          <td>{{ item.Reservation.date_dedutR}}</td>
+          <td>{{ item.Reservation.date_finR}}</td>
+          <td>{{ item.Reservation.Tag}}</td>
+          <td>{{ item.date_d}}</td>
+          <td>
+            <a  href="{% url 'update' item.id %}" ><span class="badge rounded-pill badge-notification bg-primary">modifie</span></a>
+            
+            <a href="{% url 'delete' item.id %}"><span class="badge rounded-pill badge-notification bg-danger">suprimer</span></a>
+           
+          </td>
+          </tr>
+          {%endfor%}
+          
+        
+        
+      </tbody>
+    </table>
+</dev>
+
+
+
+
+{% endblock %}

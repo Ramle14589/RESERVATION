@@ -1,0 +1,104 @@
+{% extends 'chambre/main.html'%}
+{% load static %}
+
+
+
+{% block content %}
+
+<h3 class="p-5">INFORMATION</h3>
+
+
+ <!-- ========================================= Start Price -->
+ <!-- Team Section -->
+<div id="team">
+    <div class="container">
+      <div id="row">
+        <div class="col-md-6">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="section-title">
+              <h2>nous clients.</h2><br><br>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-sn">
+                  Totale client: <span class="badge rounded-pill badge-notification bg-primary">{{t_Clients}}</span>
+                 
+            
+                </div>
+              </div>
+            </div>
+            
+            <dev class="container">
+              <table class="table">
+                <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prenom</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Date</th>  
+                        
+            
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          {% for item in Client%}
+                        <td>{{ item.nom}}</td>
+                        <td>{{ item.prenom}}</td>
+                        <td>{{ item.age}}</td>
+                        <td>{{ item.date}}</td>
+                        
+                        </tr>
+                        {%endfor%}
+                        
+                      
+                      
+                    </tbody>
+                  </table>
+            </dev>
+           
+          </div>
+        </div>
+        <div class="col-md-6"><br><br><br><br>
+          
+        
+        <dev class="container">
+          <table class="table">
+            <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">client</th>
+                    <th scope="col">etage_chambre</th>
+                    <th scope="col">Date_debut_reservation</th>
+                    <th scope="col">Date_fin_reservation</th>  
+                    <th scope="col">Action</th>    
+                    
+        
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    {% for item in Reservation %}
+                    <td>{{ item.client}}</td>
+                    <td>{{ item.Tag}}</td>
+                    <td>{{ item.date_dedutR}}</td>
+                    <td>{{ item.date_finR}}</td>
+                    <td>
+           
+          </td>
+          </tr>
+          {%endfor%}
+                  
+                </tbody>
+              </table>
+        </dev>
+       
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+{% endblock %}

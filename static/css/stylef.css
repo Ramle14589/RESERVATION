@@ -1,0 +1,65 @@
+body{
+	background-image: linear-gradient(to right, #1c311c, #90EE90);
+		margin-top: 150px !important; 
+}
+.register-left{
+	text-align: center;
+	color: #fff;
+	padding: 60px;
+}
+.register-left p{
+	padding: 30px 50px 0;
+}
+.register-left .btn-retour{
+	
+	border-radius: 1.5rem;
+	border: none;
+	width: 120px;
+	background: #f8f8f8;
+	font-weight: 600;
+	color: #555;
+	margin-top: 30px;
+	padding: 40px;
+}
+.register-left .btn-retour:hover{
+	
+	
+}
+.register-right{
+	border: none;
+	background: #f8f8f8;
+	border-top-left-radius: 10% 50%;
+	border-bottom-left-radius: 10% 50%;
+	padding-top: 20px;
+	padding-bottom : 50px;
+	padding-left: 80px;
+	padding-right: 50px;
+}
+.register-right h2{
+	text-align: center;
+	margin-bottom: 10px;
+	color: #555;
+}
+.form-inser{
+	padding: 30px;
+}
+.register-right .btn-retour{
+	float: right;
+	border-radius: 1.5rem;
+	border: none;
+	width: 120px;
+	background: #46bd55;
+	font-weight: 600;
+	color: black;
+	margin-top: 20px;
+	padding: 10px;
+}
+.register-right .btn-retour:hover{
+    
+}
+
+
+
+
+
+
